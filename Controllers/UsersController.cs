@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using udemy.Data;
-using udemy.Entities;
+using DatingApp.Data;
+using DatingApp.Entities;
 
-namespace udemy.Controllers
+namespace DatingApp.Controllers
 {
     [ApiController]
     [Route("api/[controller]")] // /api/users

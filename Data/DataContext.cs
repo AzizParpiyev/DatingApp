@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using udemy.Entities;
+using DatingApp.Entities;
 
-namespace udemy.Data
+namespace DatingApp.Data
 {
     public class DataContext : DbContext
     {

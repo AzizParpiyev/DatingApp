@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace udemy.Data.Migrations
+namespace DatingApp.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

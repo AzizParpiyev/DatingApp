@@ -1,4 +1,4 @@
-namespace udemy
+namespace DatingApp
 {
     public class WeatherForecast
     {

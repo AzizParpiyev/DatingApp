@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using DatingApp.Data;
+using DatingApp.Interfaces;
+using DatingApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("SqLiteConnectionString"));
 });
+
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddCors();
 
@@ -26,7 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
 app.UseHttpsRedirection();
 

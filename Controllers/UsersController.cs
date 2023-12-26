@@ -4,10 +4,8 @@ using DatingApp.Data;
 using DatingApp.Entities;
 
 namespace DatingApp.Controllers
-{
-    [ApiController]
-    [Route("api/[controller]")] // /api/users
-    public class UsersController :ControllerBase
+{    
+    public class UsersController : BaseApiController
     {
         private readonly DataContext Context;
         public UsersController(DataContext context)
